@@ -4,7 +4,7 @@
 - paradigm means how we write and organize a code in a program 
 - In Object-oriented programming, we represent real-world entities as an object.
 
-### example
+### example-001
 
 ```
 
@@ -23,3 +23,6 @@ removeUser(){
 }
 
 ```
+- representing a real user as an object 
+- An object can have ==data== and ==behavier==
+    
