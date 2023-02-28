@@ -73,9 +73,9 @@ removeUser(){
 
  ---
 
- 
 
- #### Inheritance
+
+ ## Inheritance
 
  - Inheritance is a mechanism that allows us to create new classes based on existing class.
 
@@ -89,5 +89,18 @@ removeUser(){
 
 - With inheritance, we can reuse an existing code without repeating a code.
 - Inheritance is the first pillar of Object Oriented Programming.
+
+
+---
+
+
+## Encapsulation
+- Encapsulation is the process of hiding data from outside world.
+
+![Employee Object](https://i.ibb.co/7kYDG2f/Capture.png)
+
+- Suppose the salary property can only be accessible in the **Employee Object**
+
+- In this **Employee Object** **caluculateSalary()** method can access salary but outside the **Employee Object** no other Object or method can access the salary property.
 
 
