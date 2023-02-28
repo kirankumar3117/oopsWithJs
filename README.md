@@ -104,3 +104,20 @@ removeUser(){
 - In this **Employee Object** **caluculateSalary()** method can access salary but outside the **Employee Object** no other Object or method can access the salary property.
 
 
+---
+
+
+## Abstraction 
+
+- Abstraction is a way of hiding the implementation details and showing only the functionality to the user.
+- In other words, it ignores the irrelevent details and shows only the required one.
+
+### example-003
+
+![Abstraction Example](https://i.ibb.co/KLBjV0p/Capture.png)
+
+- In the above example **Permenent employee** and **Part-time employee** are inheriting the properties from **Employee** Object.
+- **Perment employee**,**Part-time emploee** are the child Objects of a base Object **Employee**
+- Here, in the **Employee** Object we have name, salary properties and **getSalary()** method, this getSalary() method is just declared **Employee Object**.
+- In **Part-time emploee** and in **Permenent employee** we have different type of salary and getSalary() method return differently in both Object.
+- But while showing In the **Employee Object** we only show the getSalary() method not the theme or what it returns based what Object inherited it's properties. On this level this is what **abstraction** is.
