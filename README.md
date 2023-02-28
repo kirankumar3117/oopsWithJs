@@ -155,6 +155,7 @@ addNumber(10, 20, 30); //returns 60
 - Constructor is a pattern in Javascript based on which we can create several objects
 - In simple terms, a constuctor is simply a function which acts as a pattern or a template for creating objects.
 - a constuctor function can be normal or an expression.
+- A constructure function given name must be in pascalcase notation
 
 we can write this constructor methods in two ways using **class** or using **functions**
 
@@ -167,3 +168,91 @@ we can write this constructor methods in two ways using **class** or using **fun
 
 ---
 
+
+- Value for the constuctor comes as an argument for the function
+
+#### Creating this Person Object using Constuctor function Before ES6
+
+```
+let Person=function(name, gender, birthYear) {
+           this.name = name,
+            this.gender = gender,
+            this.birthYear = birthYear,
+            this.caluculateAge = function () {
+                return new Date().getFullYear() - birthYear;
+            };
+}
+```
+#### Creating this Person Object using Constuctor class With ES6
+
+```
+class Person {
+    constructor(name, gender, birthYear){
+
+        this.name = name,
+         this.gender = gender,
+         this.birthYear = birthYear,
+         this.caluculateAge = function () {
+             return new Date().getFullYear() - birthYear;
+         };
+    }
+}
+
+```
+
+#### Creating instances from the blupring of Person
+
+```
+// Creating instances
+let john=new Person('John','Male',1990);
+let merry=new Person('Merry','Female',1995);
+let steve=new Person('Steve','Male',1985);
+
+//Accessing the instances
+
+console.log(john,merry,steve)
+console.log(john.caluculateAge(),merry.caluculateAge(),steve.caluculateAge())
+ 
+```
+
+#### Here You Can See How Object Created
+- It's going to create the object under Person name cause this are the instances of the **Person Object**
+
+![Person Object Instances Output](https://i.ibb.co/2hgJy3R/person-output.png);
+
+## The new Operator
+
+- A **new** operator does three things while creating an object using function constructor.
+
+1. It creates An empty object.
+
+```
+let john={}
+```
+2. It also makes sure that the **this** variable in function constructor points to the newly created empty object.
+```
+// It make sure that this in blue print object points to newly created object that is john
+this=john
+
+//It is just like 
+
+john.name='John'
+
+
+```
+3. Finally, It also returns the object from the function constuctor.
+
+```
+//Once the properties and methods set on that object it return that object .
+// this happence internally so we don't have to write explicitly.
+```
+
+- The definition of the caluculateAge method is same for all the instances
+
+```
+ return new Date().getFullYear() - birthYear;
+```
+
+- this is the violation of the **dry principle** 
+
+- This problem can be resolved using inheritance

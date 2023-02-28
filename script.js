@@ -1,16 +1,19 @@
 class Person {
-    constructor(name, gender, birthYear) {
+    constructor(name, gender, birthYear){
 
-           this.name = name,
-            this.gender = gender,
-            this.birthYear = birthYear,
-            this.caluculateAge = function () {
-                return new Date().getFullYear() - birthYear;
-            };
-
+        this.name = name,
+         this.gender = gender,
+         this.birthYear = birthYear,
+         this.caluculateAge = function () {
+             return new Date().getFullYear() - birthYear;
+         };
     }
 }
 
-let Jhon=new Person('John','male','2000');
-console.log(Jhon)
-console.log(Jhon.caluculateAge())
+let john=new Person('John','Male','1990');
+let merry=new Person('Merry','Female',1995);
+let steve=new Person('Steve','Male',1985);
+
+
+console.log(john,merry,steve)
+console.log(john.caluculateAge(),merry.caluculateAge(),steve.caluculateAge())
