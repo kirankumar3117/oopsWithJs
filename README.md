@@ -6,7 +6,7 @@
 
 ### example
 
-```json
+```
 
 let user = {
     name:'John',
