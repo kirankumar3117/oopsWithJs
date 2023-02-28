@@ -62,10 +62,32 @@ removeUser(){
 
  ---
 
- 
+  
 
  ## Pillars of an Object-Oriented Programming
  - #### Inheritance
  - #### Encapsulation
  - #### Abstraction
  - #### Polymorphism
+
+
+ ---
+
+ 
+
+ #### Inheritance
+
+ - Inheritance is a mechanism that allows us to create new classes based on existing class.
+
+### example-002
+
+![Inheriting person Object in Employee Object](https://i.ibb.co/x7yCHqK/Capture.png)
+
+- In this example **Employee Object** can Inherit the properties of **person Object** 
+
+![Inherited properties of Employee Object](https://i.ibb.co/cCGNPvJ/Capture.png)
+
+- With inheritance, we can reuse an existing code without repeating a code.
+- Inheritance is the first pillar of Object Oriented Programming.
+
+
