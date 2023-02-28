@@ -121,3 +121,49 @@ removeUser(){
 - Here, in the **Employee** Object we have name, salary properties and **getSalary()** method, this getSalary() method is just declared **Employee Object**.
 - In **Part-time emploee** and in **Permenent employee** we have different type of salary and getSalary() method return differently in both Object.
 - But while showing In the **Employee Object** we only show the getSalary() method not the theme or what it returns based what Object inherited it's properties. On this level this is what **abstraction** is.
+
+
+---
+
+
+## Polymorphism
+
+- Polymorphism means different forms. In Object-Oriented programming, we can write methods with same name but different implementation.
+
+### example-004
+
+```
+addNumbers(x, y){
+    return x + y;
+}
+addNumbers(x, y, z){
+    return x + y + z;
+}
+addNumber(10 ,20); //returns 30
+addNumber(10, 20, 30); //returns 60
+ 
+```
+
+---
+
+
+## Inheritance
+### Constructor function 
+
+- In Javascript **Inheritance** is possible with constructor functions 
+
+- Constructor is a pattern in Javascript based on which we can create several objects
+- In simple terms, a constuctor is simply a function which acts as a pattern or a template for creating objects.
+- a constuctor function can be normal or an expression.
+
+we can write this constructor methods in two ways using **class** or using **functions**
+
+- In example-001 we created a base object or a blue print of Person Object
+- And inherited those properties to john,merry and steve
+
+---
+
+![Person Object](https://i.ibb.co/mcppRJN/person-object.png)
+
+---
+
