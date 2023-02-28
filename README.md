@@ -24,5 +24,5 @@ removeUser(){
 
 ```
 - representing a real user as an object 
-- An object can have ==data== and ==behavier==
+- An object can have **data** and **behavier**
     
