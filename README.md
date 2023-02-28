@@ -50,8 +50,22 @@ removeUser(){
 
 ```
 
-***We use Objects to pack data and behavier of real-world entity all in big block**
+***We use Objects to pack data and behavier of real-world entity all in big block***
 
 - Objects are self contained piece or block of code and we use them as building block of our application and makes them interact with one another.
 
 ![Object with instances](https://i.ibb.co/2MV6gMz/Capture.png)
+
+ - Here **John** **Merry** **steve**  are the instances of the **person** Object.
+ - and person objects acts as a **blue print** for the instances.
+
+
+ ---
+
+ 
+
+ ## Pillars of an Object-Oriented Programming
+ - #### Inheritance
+ - #### Encapsulation
+ - #### Abstraction
+ - #### Polymorphism
