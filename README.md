@@ -393,4 +393,86 @@ console.log(kiran.getName); //kiran kumar
 - So, when data is hiding we use this accesser properties to read and set the value.
 
 
+## Static methods
+- Static methods are those methods which are associated with **class** and not with **instances**
 
+```
+class Person {
+    constructor(name, gender, birthYear){
+
+        this.name = name,
+         this.gender = gender,
+         this.birthYear = birthYear
+    }
+
+    caluculateAge() {
+        return new Date().getFullYear() - this.birthYear;
+    };
+    static welcome(){
+        console.log("Welcom you ")
+    }
+}
+
+// Person.welcome() 
+
+for function consctructor
+let Person=function(name, gender, birthYear) {
+        this.name = name,
+         this.gender = gender,
+         this.birthYear = birthYear
+
+}
+
+//we create static method like this
+
+Person.welcome=function(){
+    console.log("Welcome you")
+}
+
+//Person.welcome()
+```
+
+- Static methods are only accessible by it's base object not by instances.
+
+## Object.create() 
+
+![Object.create() method](https://i.ibb.co/qgCqLWB/Object-create-method.png)
+
+## function constructor to function constructor inheritance
+
+```
+//creating a person constructor
+let Person=function(name,gender,birthYear){
+    this.name=name,
+    this.gender=gender,
+    this.birthYear=birthYear
+}
+
+Person.prototype.caluculateAge=function(){
+    return new Date().getFullYear() - this.birthYear
+}
+
+// creating a employee constructor
+let Employee=function(name,gender,birthYear,empId,salary){
+    //employee inhering the properties from person
+    //here this as a first argument pointing to kiran 
+    Person.call(this,name,gender,birthYear);
+    this.empId=empId,
+    this.salary=salary
+}
+
+//we need do this for accessing prototype properties of person
+// before defining prototype for employee 
+Employee.prototype=Person.prototype;
+
+Employee.prototype.caluculateAnualSalary=function(){
+    return 12 * this.salary;
+}
+
+
+let kiran=new Employee('kiran','male',2000,'kvopk154',1000);
+
+// now we can have access to person prototype prperties too
+console.log(kiran)
+
+```
