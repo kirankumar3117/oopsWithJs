@@ -3,13 +3,12 @@ class Person {
 
         this.name = name,
          this.gender = gender,
-         this.birthYear = birthYear,
-         this.caluculateAge = function () {
-             return new Date().getFullYear() - birthYear;
-         };
+         this.birthYear = birthYear
     }
 }
-
+Person.prototype.caluculateAge=function () {
+    return new Date().getFullYear() - this.birthYear;
+};
 let john=new Person('John','Male','1990');
 let merry=new Person('Merry','Female',1995);
 let steve=new Person('Steve','Male',1985);

@@ -150,7 +150,7 @@ addNumber(10, 20, 30); //returns 60
 ## Inheritance
 ### Constructor function 
 
-- In Javascript **Inheritance** is possible with constructor functions 
+- In Javascript **Inheritance** is possible with prototype for that we need a constructor function to make a base Object
 
 - Constructor is a pattern in Javascript based on which we can create several objects
 - In simple terms, a constuctor is simply a function which acts as a pattern or a template for creating objects.
@@ -253,6 +253,48 @@ john.name='John'
  return new Date().getFullYear() - birthYear;
 ```
 
-- this is the violation of the **dry principle** 
+- this is the violation of the **dry principle** (do not repeat yourself)
 
 - This problem can be resolved using inheritance
+
+
+## Prototype
+
+- Each and every Javascript Object has a **prototype property**
+- Inheritance in Javascript is achived using this prototype property
+- When we attach a property or a method to the prototype property of that object, those properties and methods can be inherited by the instantated object.
+
+#### example-005
+
+![Prototype persn Object](https://i.ibb.co/19L6yPk/person-prototype-property.png)
+
+- In the above figure we see **Person Object** not defining the **caluculateAge()** method but it is attched to it's *Prototype property*
+- Now all the instnaces can have access to the *prototype property* of **Person Object**
+- This means all the instances are inheriting the **caluculateAge()** from the *prototype property* of Person Object
+
+```
+class Person {
+    constructor(name, gender, birthYear){
+
+        this.name = name,
+         this.gender = gender,
+         this.birthYear = birthYear
+    }
+}
+
+//defining a prototype property 
+
+Person.prototype.caluculateAge=function () {
+    return new Date().getFullYear() - this.birthYear;
+};
+```
+- Now we can see the output for this not contains *caluculateAge()* method but we can access it 
+
+```
+console.log(john,merry,steve)
+console.log(john.caluculateAge(),merry.caluculateAge(),steve.caluculateAge())
+```
+
+![Person-prototype-property-inherting-instances-output](https://i.ibb.co/Lgg04v4/prototype-property-output.png)
+
+- This is how we do inheritance in javascript
