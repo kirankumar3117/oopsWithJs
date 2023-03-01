@@ -298,3 +298,99 @@ console.log(john.caluculateAge(),merry.caluculateAge(),steve.caluculateAge())
 ![Person-prototype-property-inherting-instances-output](https://i.ibb.co/Lgg04v4/prototype-property-output.png)
 
 - This is how we do inheritance in javascript
+
+- we can see instnaces can contain a prototype of **Person Object**
+
+![Prototype of John Instance](https://i.ibb.co/0h1ypn8/001.png)
+
+- but **Prototype Object** which is the base Object can also have **prototype property**
+- That means **Person Object** is also an instance. but instance of what..?
+
+## Prototype chaining
+
+- **Person Object** is also a prototype of **Object Constructor**
+
+- Any object we create which in an instance of **Object Constructor**
+
+```
+// for suppose
+let person={
+    name:'kiran',
+    birthYear:2000,
+    gender:'male'
+}
+
+when we create an Object this is what happence in back of javascript
+
+// let person=new Object(); empty Object
+//person.name='kiran'
+//person.birthYear=2000
+//person.gender='male'
+```
+
+- person  instanceof Object //true
+
+```
+console.log(person.hasOwnProperty('name'))  //true
+// this hasOwnProperty is inherited from Object Constructor. that's why we can access that from our person object
+```
+
+- same thing happens to our **Person Object**
+![prototype example](https://i.ibb.co/sgVnVHZ/002.png)
+
+- With this prototype chaining **john Object** can access the **Object Constructor** prototype properties.
+
+![jon object accessing the prototype of object constructor](https://i.ibb.co/2tL7qgP/003.png)
+
+- same thing happens with array
+```
+let arr=[10, 20, 30]
+// it creates
+// new Array()
+//having all the methods like 
+arr.push(40)
+```
+
+### Getter and Setter Properties
+
+- Besides the data properties an Object can have **Accessor** Properties, this are methods that gets or sets the value of an Object property
+
+1. getter property : read objects property value
+2. setter property : set an objects property value
+
+- Using set and get keywords we create this methods
+
+```
+let kiran={
+    name:'kiran',
+    birthYear:2000,
+    anualSalary:12000,
+
+    get getName(){
+        return this.name;
+    }
+
+    set setName(val){
+        return this.name=val;
+    }
+}
+
+// now we can access this getName property as it like any other property 
+
+console.log(kiran.getName); //kiran
+
+//we don't need to specifie this as a method, we are using get it convert it as it's own property
+
+kiran.setName='kiran kumar';
+
+console.log(kiran.getName); //kiran kumar
+```
+
+#### we do can access an d modify directly, but why use setter and getter
+- When we want don't show some properties, we use this get and set properties so that it can't be accessed directly
+- In  **OOP** we useally hide data from the outside world 
+- **ENCAPSULATION** : with this we hide data from the outside world.
+- So, when data is hiding we use this accesser properties to read and set the value.
+
+
+
