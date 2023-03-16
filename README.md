@@ -442,7 +442,7 @@ Person.welcome=function(){
 
 ## function constructor to function constructor inheritance
 
-```
+```js
 //creating a person constructor
 let Person=function(name,gender,birthYear){
     this.name=name,
@@ -481,7 +481,7 @@ console.log(kiran)
 
 ## Inheritance between two classes
 
-```
+```js
 // Inheritance between two classes
 
 class Person{
