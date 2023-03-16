@@ -6,7 +6,7 @@
 
 ### example-001
 
-```
+```js
 
 let user = {
     name:'John',
