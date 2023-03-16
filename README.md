@@ -398,7 +398,7 @@ console.log(kiran.getName); //kiran kumar
 ## Static methods
 - Static methods are those methods which are associated with **class** and not with **instances**
 
-```
+```js
 class Person {
     constructor(name, gender, birthYear){
 
@@ -417,7 +417,7 @@ class Person {
 
 // Person.welcome() 
 
-for function consctructor
+//for function consctructor
 let Person=function(name, gender, birthYear) {
         this.name = name,
          this.gender = gender,
