@@ -132,7 +132,7 @@ removeUser(){
 
 ### example-004
 
-```
+```js
 addNumbers(x, y){
     return x + y;
 }
@@ -141,6 +141,8 @@ addNumbers(x, y, z){
 }
 addNumber(10 ,20); //returns 30
 addNumber(10, 20, 30); //returns 60
+
+//In javascript polymorphism is a different scenario.
  
 ```
 
